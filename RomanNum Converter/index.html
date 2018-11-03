@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RomanNum Converter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    </head>
+
+    <body>
+        <div id="form1">
+            <form action="">
+                Unesite broj iz dekadnog sistema: <input type="number" min="1" name="number" id="number-inp"> <br><br>
+                <input type="submit" value="Convert" id="num-to-roman"> <br><br>
+                Rimski broj: <p id="roman-out"></p>
+            </form>
+        </div>
+
+        <div id="form2">
+            <form action="">
+                Unesite rimski broj: <input type="text" name="roman" id="roman-inp"> <br><br>
+                <input type="submit" value="Convert" id="roman-to-num"> <br><br>
+                Broj u dekadnom sistemu: <p id="number-out"></p>
+            </form>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

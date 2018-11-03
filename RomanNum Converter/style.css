@@ -1,0 +1,17 @@
+#roman-out, #number-out {
+    width: 150px;
+    height: 20px;
+    border: 1px solid gray;
+}
+
+#number-inp, #roman-inp {
+    width: 150px;
+}
+
+#form1, #form2 {
+    border-bottom: 1px solid black;
+}
+
+#form2 {
+    padding-top: 15px;
+}
