@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#images {
+    position: relative;
+    margin: auto;
+    width: 50vw;
+    height: 60vh;
+    padding-top: 3%;
+}
+
+.image {
+    width: 50vw;
+    height: 60vh;
+}
+
+.image-div {
+    display: none;
+}
+
+.arrow-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    position: absolute;
+}
+
+#right-arrow {
+    right: 0;
+}
+
+.fas {
+    font-size: 30px;
+}
+
+.fas:hover {
+    cursor: pointer;
+}
+
+.btn-holder {
+    text-align: right;
+    display: none;
+}
