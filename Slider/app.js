@@ -9,7 +9,14 @@ var btn = document.getElementById("btn");
 showImage(imageNumber);
 left.addEventListener("click", indexMinus);
 right.addEventListener("click", indexPlus);
-document.addEventListener("keydown", arrowUse);
+for(let i = 0; i < images.length; i++) {
+    images[i].addEventListener("mouseover", function() {
+        document.addEventListener("keydown", arrowUse);
+    });
+    images[i].addEventListener("mouseout", function() {
+        document.removeEventListener("keydown", arrowUse);
+    });
+}
 clckImg();
 
 function indexMinus() {
