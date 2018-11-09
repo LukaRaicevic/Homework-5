@@ -1,10 +1,15 @@
-var imageNumber = 1;
-var imageDiv = document.getElementsByClassName("image-div");
-var images = document.getElementsByClassName("image");
-var container = document.getElementById("images");
-var left = document.getElementById("left-arrow");
-var right = document.getElementById("right-arrow");
-var btn = document.getElementById("btn");
+(function() {
+function $id(id) {
+    return document.getElementById(id);
+}
+
+let imageNumber = 1;
+const imageDiv = document.getElementsByClassName("image-div");
+const images = document.getElementsByClassName("image");
+const container = $id("images");
+const left = $id("left-arrow");
+const right = $id("right-arrow");
+const btn = $id("btn");
 
 showImage(imageNumber);
 left.addEventListener("click", indexMinus);
@@ -90,3 +95,4 @@ function arrowUse(e) {
         indexPlus();
     }
 }
+})();

@@ -1,5 +1,10 @@
-var submit1 = document.getElementById("num-to-roman");
-var submit2 = document.getElementById("roman-to-num");
+(function() {
+function $id(id) {
+    return document.getElementById(id);
+}
+
+const submit1 = $id("num-to-roman");
+const submit2 = $id("roman-to-num");
 
 submit1.addEventListener("click", numToRom);
 submit2.addEventListener("click", romToNum);
@@ -7,12 +12,12 @@ submit2.addEventListener("click", romToNum);
 function numToRom() {
     event.preventDefault();
 
-    var romanNums = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
-    var numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    const romanNums = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+    const numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 
-    let num = Number(document.getElementById("number-inp").value);
+    let num = Number($id("number-inp").value);
     let rom = "";
-    let rOut = document.getElementById("roman-out");
+    const rOut = $id("roman-out");
 
     for(let i = 0; i < numbers.length; i++) {
         while(num >= numbers[i]) {
@@ -27,9 +32,9 @@ function numToRom() {
 function romToNum() {
     event.preventDefault();
 
-    let romStr = String(document.getElementById("roman-inp").value);
+    let romStr = String($id("roman-inp").value);
     let nmbr = numFromChar(romStr.charAt(romStr.length-1));
-    let nOut = document.getElementById("number-out");
+    const nOut = $id("number-out");
 
     if(romStr.length > 1) {
         for(let i = romStr.length-1; i > 0; i--) {
@@ -55,4 +60,4 @@ function numFromChar(char) {
         case 'I' : return 1;
     }
 }
-
+})();
