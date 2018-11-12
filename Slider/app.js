@@ -25,12 +25,12 @@ for(let i = 0; i < images.length; i++) {
 clckImg();
 
 function indexMinus() {
-    if(imageNumber == 1) { imageNumber = imageDiv.length+1; }
+    if(imageNumber === 1) { imageNumber = imageDiv.length+1; }
     showImage(imageNumber--);
 }
 
 function indexPlus() {
-    if(imageNumber == imageDiv.length) { imageNumber = 0; }
+    if(imageNumber === imageDiv.length) { imageNumber = 0; }
     showImage(imageNumber++);
 }
 
@@ -88,10 +88,10 @@ function widHeig(w, h, p) {
 
 function arrowUse(e) {
     e = e || window.event;
-    if(e.keyCode == "37") {
+    if(e.keyCode === 37) {
         indexMinus();
     }
-    if(e.keyCode == "39") {
+    if(e.keyCode === 39) {
         indexPlus();
     }
 }
